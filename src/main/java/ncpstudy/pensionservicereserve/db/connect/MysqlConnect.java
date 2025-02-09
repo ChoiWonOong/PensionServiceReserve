@@ -10,10 +10,11 @@ import java.util.Map;
 
 public class MysqlConnect {
     static final String MYSQL_DRIVER = "com.mysql.cj.jdbc.Driver";
-    File file = new File("src\\main\\resources\\properties.yaml");
+    File file = new File("..\\properties.yaml");
+    //File file = new File("");
     Map<String, Object> properties = new Yaml().load(new FileReader(file.getAbsolutePath()));
     // local DB
-    String url = "jdbc:mysql://localhost:3306/study502?serverTimezone=Asia/Seoul";
+    String url = "jdbc:mysql://localhost:3306/pension?serverTimezone=Asia/Seoul";
     String username = properties.get("username").toString();
     String password = properties.get("password").toString();
 

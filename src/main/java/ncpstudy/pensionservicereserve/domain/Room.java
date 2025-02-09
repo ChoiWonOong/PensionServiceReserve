@@ -5,15 +5,23 @@ public class Room {
     private String roomName;
     private int stdNumPeople = 2;
     private int maxNumPeople = 4;
+    private String link;
 
     public Room() {}
 
-    public Room(String roomName, int stdNumPeople, int maxNumPeople) {
+    public Room(String roomName, int stdNumPeople, int maxNumPeoplem, String link) {
         this.roomName = roomName;
         this.stdNumPeople = stdNumPeople;
         this.maxNumPeople = maxNumPeople;
+        this.link = link;
     }
 
+    public String getLink(){
+        return link;
+    }
+    public void setLink(String link){
+        this.link = link;
+    }
     public void setId(int id) {
         this.id = id;
     }
